@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Slider</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>My Silder</h1>
+    <div class="slider">
+        <img src="./assets/beads.jpg" alt="cute concept" id="slider-img">
+        <div class="left-arrow" onclick="left()">
+         <b>&#8672;</b>
+        </div>
+        <div class="right-arrow" onclick="right()">
+         <b>&#8674;</b>
+        </div>
+
+        <div class="img-indicator">
+            <img src="./assets/beads.jpg" alt="" onclick="changeSource('./assets/beads.jpg')" class="indicator">
+            <img src="./assets/seaform.jpg" alt=""  onclick="changeSource('./assets/seaform.jpg')" class ="indicator">
+            <img src="./assets/candies.jpg" alt=""  onclick="changeSource('./assets/candies.jpg')" class ="indicator">
+            <img src="./assets/flowers.jpg" alt=""  onclick="changeSource('./assets/flowers.jpg')" class ="indicator">
+            <img src="./assets/pearls.jpg" alt=""  onclick="changeSource('./assets/pearls.jpg')" class="indicator">
+            <img src="./assets/seashell2.jpg" alt=""  onclick="changeSource('./assets/seashell2.jpg')" class="indicator">        
+       </div>
+    </div>
+    <!-- js  -->
+     <script src="./index.js"></script>
+</body>
+</html>
