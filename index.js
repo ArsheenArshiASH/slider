@@ -30,11 +30,13 @@ function left() {
    }
    slideImg.src = images[imgIndex];
 }
-function changeSource(source) {
+function changeSource(source,index) {
 slideImg.src= source;
+imgIndex = index;
 for(var i = 0 ; i < indicator.length ; i++) {
    if(slideImg.src === indicator[i].src) {
       indicator[i].className += " bright"
+      imgIndex = index;
    }     
 }
 }
