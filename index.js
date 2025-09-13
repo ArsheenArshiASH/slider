@@ -9,7 +9,10 @@
 
 var images = ["./assets/beads.jpg" , "./assets/seaform.jpg" , "./assets/candies.jpg" , "./assets/flowers.jpg" ,"./assets/pearls.jpg" ,"./assets/seashell2.jpg"]
 var slideImg = document.getElementById("slider-img");
-var indicator = document.getElementsByClassName("indicator");
+// var indicator = document.getElementsByClassName("indicator");
+var indicator= document.getElementById("imgIndicator");
+var indicatorImages = indicator.getElementsByTagName("img");
+// console.log(indicatorImages);
 // console.log(indicator)
 var imgIndex = 0;
 
@@ -17,9 +20,9 @@ function right() {
    if(imgIndex === images.length-1) {
       imgIndex = 0;
    }else{
-      imgIndex++;  
+      imgIndex++;     
    }
-   slideImg.src = images[imgIndex];
+   slideImg.src = images[imgIndex]; 
 }
 
 function left() {
@@ -33,13 +36,22 @@ function left() {
 function changeSource(source,index) {
 slideImg.src= source;
 imgIndex = index;
-for(var i = 0 ; i < indicator.length ; i++) {
-   if(slideImg.src === indicator[i].src) {
-      indicator[i].className += " bright"
-      imgIndex = index;
-   }     
+// for(var i = 0 ; i < indicator.length ; i++) {
+//    if(slideImg.src === indicator[i].src) {
+//       indicator[i].className += " bright"
+//       // imgIndex = index;
+//    }     
+// }
+   for (var i = 0 ; i < indicatorImages.length ; i++) {
+  if(indicatorImages[i].src === slideImg.src) {
+    indicatorImages[i].className = "bright"
+  }else{
+      indicatorImages[i].className = ""
+  }
 }
 }
+
+
 
 
 
